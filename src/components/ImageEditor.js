@@ -13,7 +13,7 @@ const ActionButton = ({ onClick, label, disabled, isWide }) => {
     return (
         <button
             disabled={disabled}
-            className={`w-[50px] h-[50px] font-bold py-2 px-4 rounded-md flex-auto ${isWide && "basis-full"} ${disabled ? "bg-gray-400 text-gray-300 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-700 text-white"}`}
+            className={`w-[50px] h-[50px] font-bold py-2 px-4 rounded-md ${isWide && "basis-full"} ${disabled ? "bg-gray-400 text-gray-300 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-700 text-white"}`}
             onClick={onClick}
         >
             {label}
@@ -200,7 +200,7 @@ function ImageEditor() {
                     onChange={handleImageChange}
                     className="hidden"
                 />
-                <div className="border-2 rounded-lg w-[800px] h-[500px] relative cursor-pointer">
+                <div className="border-2 rounded-lg w-[400px] lg:w-[800px] h-[500px] relative cursor-pointer">
                     {!image ? (
                         <div className="flex flex-col items-center justify-center h-full select-none	">
                             <FcRemoveImage className="text-9xl" />
@@ -212,10 +212,10 @@ function ImageEditor() {
                             id="image"
                             src={image}
                             alt="Selected Image"
-                            className="w-[800px] h-[500px] object-contain"
+                            className="w-[400px] md:w-[800px] h-[500px] object-contain"
                         />
                     )}
-                    <div className="flex justify-center items-center w-fit absolute left-0 right-0 bottom-4 ml-auto mr-auto [&>button:not(:last-child)]:mr-1 [&>button]:flex [&>button]:items-center [&>button]:shadow-lg [&>button]:h-[40px] [&>button]:w-fit  [&>button]:min-w-[45px] " >
+                    <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-2 w-[250px] md:w-fit absolute left-0 right-0 bottom-4 ml-auto mr-auto [&>button]:flex [&>button]:items-center [&>button]:shadow-lg [&>button]:h-[40px] [&>button]:w-fit [&>button]:min-w-[45px] " >
                         <ActionButton
                             disabled={!image}
                             onClick={handleFlipX}
