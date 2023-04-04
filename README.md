@@ -14,4 +14,5 @@ This project was build with
 4. Redo,
 5. And Download Result Image
 
+## Screenshot Image Editor
 ![ScreenShot](https://raw.github.com/riiraai/simple-image-editor/master/public/images/ss-image-editor.jpg)
