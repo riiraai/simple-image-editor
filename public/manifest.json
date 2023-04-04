@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Image Editor",
+  "name": "Image Editor Simple - Reactjs",
   "icons": [
     {
       "src": "favicon.ico",
